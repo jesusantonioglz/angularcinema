@@ -1,3 +1,76 @@
-<p>
-  page-private works!
-</p>
+<!-- PÁGINA PRIVADA, CONTENIDO YA DENTRO DE LA APLICACIÓN -->
+<div>
+
+	<div class="card body">
+
+<!-- TÍTULO DE LA SECCIÓN -->
+	<h1 class="display-3">PELÍCULAS</h1>
+
+<!-- TABLA PARA COLOCAR LOS DATOS -->
+	<table class="table table-hover">
+
+<!-- CABECERA DE LA TABLA, NOMBRES DE LAS COLUMNAS -->
+		<thead class="text-center">
+
+			<tr>
+				<td style="width: 20%" scope="col"><h2>PELÍCULA</h2></td>
+				<td style="width: 20%" scope="col"><h2>TÍTULO</h2></td>
+				<th style="width: 40%" scope="col"><h2>SINOPSIS</h2></th>
+				<th style="width: 20%" scope="col"><h2>VALORACIÓN</h2></th>
+			</tr>
+
+		</thead>
+
+<!-- CUERPO DE LA TABLA -->
+		<tbody>
+<!--	*ngFor CICLO PARA COLOCAR LOS ELEMENTOS DE LAS PELICULAS
+		EN CADA CELDA ITERATIVAMENTE POR CADA FILA					-->
+			<tr *ngFor="let item of movies">
+
+				<!--<td>{{item.wallpaper}}</td>-->
+				<td><img [src]="item.wallpaper" width="140px"></td>
+				<td><h4>{{item.Titulo}}</h4></td>
+				<td><h5>{{item.Sinopsis}}</h5></td>
+				<td>
+					<a type="button" class="btn btn-primary btn-lg" [routerLink]="['/votes', item.id]">
+						¿TE GUSTARÍA CALIFICAR ESTA PELÍCULA?<br><br>
+						<h3 class="promediostars">PROMEDIO: {{item.promedio}}<br>
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h3>
+					</a>
+<!--
+					<fieldset class="rating">
+
+						<input type="radio" id="star5" name="rating" value="5" />
+    						<label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    					<input type="radio" id="star4half" name="rating" value="4 and a half" />
+    						<label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    					<input type="radio" id="star4" name="rating" value="4" />
+    						<label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    					<input type="radio" id="star3half" name="rating" value="3 and a half" />
+    						<label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    					<input type="radio" id="star3" name="rating" value="3" />
+    						<label class = "full" for="star3" title="Meh - 3 stars"></label>
+    					<input type="radio" id="star2half" name="rating" value="2 and a half" />
+    						<label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    					<input type="radio" id="star2" name="rating" value="2" />
+    						<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    					<input type="radio" id="star1half" name="rating" value="1 and a half" />
+    						<label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    					<input type="radio" id="star1" name="rating" value="1" />
+    						<label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    					<input type="radio" id="starhalf" name="rating" value="half" />
+    						<label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+
+					</fieldset>
+-->
+				</td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+	</div>
+
+</div>

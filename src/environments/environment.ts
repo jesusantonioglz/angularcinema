@@ -2,9 +2,23 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
+
+// CONEXION A LA BBDD FIREBASE
+
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyCwkdI43ChqwgvBUDEemGizmgXZu76Klqk",
+    authDomain: "angularcinema.firebaseapp.com",
+    databaseURL: "https://angularcinema.firebaseio.com",
+    projectId: "angularcinema",
+    storageBucket: "angularcinema.appspot.com",
+    messagingSenderId: "1086702467821"
+  }
 };
+
+
 
 /*
  * In development mode, to ignore zone related error stack frames such as
