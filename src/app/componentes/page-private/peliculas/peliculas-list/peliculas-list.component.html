@@ -1,0 +1,37 @@
+<p>
+  peliculas-list works!
+</p>
+
+<div class="card">
+
+	<div class="card body">
+
+	<h1 class="text-center">PELÍCULAS<i class="fa fa-film"></i></h1>
+
+	<table class="table table-hover">
+
+		<thead>
+			<tr>
+				<th scope="col">PELÍCULA</th>
+				<th scope="col">TÍTULO</th>
+				<th scope="col">SINOPSIS</th>
+				<th scope="col">VALORACIÓN</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr *ngFor="let pelicula of peliculaList">
+				<th scope="row">A</th>
+				<th>{{pelicula.Titulo}}</th>
+				<th>{{pelicula.Sinopsis}}</th>
+				<th>Column content</th>
+			</tr>
+
+		</tbody>
+
+	</table>
+
+	</div>
+
+</div>

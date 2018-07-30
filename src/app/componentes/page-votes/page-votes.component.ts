@@ -52,8 +52,8 @@ export class PageVotesComponent implements OnInit {
 		this.starS.getMovie( this.idPelicula ).subscribe( doc => {
 
 			this.pelicula = doc;									// Hace referencia al documento (la pelicula en la B. D.)
-			//this.formRating = doc.promedio;			// Hace referencia al atributo 'promedio' de dicha pelicula
-			this.formRating = this.pelicula.promedio;
+			this.formRating = doc.promedio;			// Hace referencia al atributo 'promedio' de dicha pelicula
+			//this.formRating = this.pelicula.promedio;
 			this.isLoadingData = false;
 			console.log(this.pelicula);
 			/*	obtenemos del servicio
