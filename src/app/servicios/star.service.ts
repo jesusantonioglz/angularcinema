@@ -37,6 +37,7 @@ export class StarService {
 	//getMovie( Titulo ){}
 
 			this.movieDocument = this.afs.collection( 'peliculascinema' ).doc( movie );
+			console.log(this.movieDocument);
 			this.movie = this.movieDocument.valueChanges();
 			return this.movie;
 			//const movieRef =  this.afs.collection('peliculascinema', ref => ref.where('Titulo', '==', Titulo) );

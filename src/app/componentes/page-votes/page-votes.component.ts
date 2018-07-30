@@ -24,8 +24,8 @@ export class PageVotesComponent implements OnInit {
 	public formRating: number;									// promedio
 
 
-	private idPelicula: String;									// ID de la pelicula
-	private userId: String;											// UID del usuario activo
+	private idPelicula: string;									// ID de la pelicula
+	private userId: string;											// UID del usuario activo
 
 	constructor(
 
@@ -34,7 +34,6 @@ export class PageVotesComponent implements OnInit {
 		private router: Router,										// Enrutador
 		private starS: StarService								// servicio
 	) {
-
 		//this.userId = this.afAuth.auth.currentUser.uid;		// UID del usuario activo obtenida en Firebase
 		afAuth.authState.subscribe( user => {
 		if (user) { this.userId = user.uid }
@@ -48,14 +47,14 @@ export class PageVotesComponent implements OnInit {
 		this.idPelicula = this.rutaActiva.snapshot.params["id"];		/*	Obtenemos el id de la pelicula
 																																		por el parametro que recibimos,
 																																		ayudandonos de la rutaActiva.		*/
-
+		console.log(this.idPelicula);
 		this.starS.getMovie( this.idPelicula ).subscribe( doc => {
 
 			this.pelicula = doc;									// Hace referencia al documento (la pelicula en la B. D.)
 			this.formRating = doc.promedio;			// Hace referencia al atributo 'promedio' de dicha pelicula
 			//this.formRating = this.pelicula.promedio;
 			this.isLoadingData = false;
-			console.log(this.pelicula);
+			//console.log(this.pelicula);
 			/*	obtenemos del servicio
 					la Pelicula y obtenemos
 					sus atributos asignándolos
@@ -64,7 +63,6 @@ export class PageVotesComponent implements OnInit {
 		});
 
 	}
-
 
 	votos(){
 
@@ -81,7 +79,6 @@ export class PageVotesComponent implements OnInit {
 			valoracionDada: this.formRating			//	Valoración dada por el usuario.
 		}
 
-
 		if( buscarUsuario ){										/*	Si el usuario existe lo cortamos
 																								del array valoraciones mediante el indice */
 
@@ -91,7 +88,6 @@ export class PageVotesComponent implements OnInit {
 			// indice => Posición del array para detectar el elemento a eliminar.
 			// howMany => Cantidad de elementos a eliminar del Array.
 		}
-
 
 		valoraciones.push( usuario );			// Insertamos al usuario en el Array valoraciones
 
@@ -109,63 +105,3 @@ export class PageVotesComponent implements OnInit {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//		this.movie = {
-//			titulo: this.rutaActiva.snapshot.params.Titulo,
-//			wallpaper: this.rutaActiva.snapshot.params.wallpaper,
-//			sinopsis: this.rutaActiva.snapshot.params.Sinopsis
-//		};
-
-//		this.rutaActiva.params.subscribe(
-//		( params: Params ) => {
-
-//			this.movie.titulo = params.Titulo;
-//			this.movie.wallpaper = params.wallpaper;
-//			this.movie.sinopsis = params.Sinopsis;
-//		});
-
-//		this.promedio = this.starS.getMovieStars( titulo );
-
-
-
-
-//	get movieId() {
-//		return this.movieDoc.ref.id
-//	}
-
-//	get userId() {
-//		return this.userDoc.ref.id
- //	}

@@ -18,7 +18,7 @@ export class PagePrivateComponent implements OnInit {
   	this.movieS.getMovies()
   	.subscribe( item => {
   		this.movies = item;
-  		console.log(this.movies);
+  		//console.log(this.movies);
   	})
   }
 
