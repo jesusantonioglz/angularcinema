@@ -1,7 +1,7 @@
 // @Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // Enrutamiento
@@ -71,7 +71,9 @@ import { AmChartsModule } from '@amcharts/amcharts3-angular';
     AngularFireStorageModule,
     AngularFireAuthModule,
     AmChartsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, PeliculaService, MoviesService, StarService, GraphicsService, AmChartsService],
   bootstrap: [AppComponent]

@@ -32,26 +32,4 @@ export class GraphicsService {
   	return this.movies;
   }
 
-	/*generateChartData(){
-		 this.ref = this.moviesCollection.valueChanges();
-
-		 var chartData = [];
-
-		 this.ref.on( "child_added", function(snapshot){
-
-			 var data = snapshot.val();
-
-			 chartData.push({
-         "category": data.Titulo,
-         "column-1": data.promedio
-       });
-
-		 });
-
-		 this.ref.on( "child_changed", function(snapshot){
-			 console.log(snapshot.val());
-		 });
-
-		 return chartData;
-	}*/
 }

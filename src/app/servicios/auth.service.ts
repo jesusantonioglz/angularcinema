@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
-
 // angularfire2
 import { AngularFireAuth } from 'angularfire2/auth';
-
-// añadidas hoy
-// import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-
-//
 
 import * as firebase from 'firebase/app';
 import { map } from 'rxjs/operators';
@@ -30,8 +24,6 @@ export class AuthService {
   	});
   }
 
-
-
   loginEmail(email: string, password: string){
   	return new Promise((resolve, reject) =>{
   		this.afAuth.auth.signInWithEmailAndPassword(email, password)
@@ -40,16 +32,12 @@ export class AuthService {
   	});
   }
 
-
-
   getAuth(){
   	return this.afAuth.authState.pipe(map(auth => auth));
   }
 
-
-
   logout(){
   	return this.afAuth.auth.signOut();
-
   }
+  
 }

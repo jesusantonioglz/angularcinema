@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { GraphicsService } from '../../servicios/graphics.service';
 // AmCharts
 import { AmChartsService, AmChart } from '@amcharts/amcharts3-angular';
-
+// Observable
 import { Observable } from 'rxjs';
 
 

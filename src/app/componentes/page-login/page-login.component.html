@@ -1,31 +1,34 @@
+<p>
+  page-login works!
+</p>
+
 <!-- PÁGINA DEL SIGN IN (LOGIN) DE LOS USUARIOS A LA APLICACIÓN -->
 <div class="row mt-4">
-	
+
 	<div class="col-md-6 mx-auto text-center">
 
 		<div class="card text-white bg-primary">
-			
+
 			<h4 class="card-title mt-4">SIGN IN</h4>
+
 			<div class="card-body">
-<!-- FORMULARIO -->
+
+				<!-- FORMULARIO -->
 				<form (submit)="onSubmitLogin()">
-					
+
 					<div class="form-group">
-<!-- CORREO ELECTRÓNICO -->
+						<!-- CORREO ELECTRÓNICO -->
 						<label for="email">Email</label>
-						
 						<input type="email" id="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" aria-describedby="emailHelp" placeholder="Escribe tu dirección de correo electrónico.">
-
 					</div>
 
 					<div class="form-group">
-<!-- CONTRASEÑA -->
+						<!-- CONTRASEÑA -->
 						<label for="password">Password</label>
-						
 						<input type="password" id="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Escribe tu contraseña.">
-					
 					</div>
-<!-- BOTÓN PARA ENVIAR LOS DATOS DEL FORMULARIO Y HACER EL SIGN IN -->
+
+					<!-- BOTÓN PARA ENVIAR LOS DATOS DEL FORMULARIO Y HACER EL SIGN IN -->
 					<input type="submit" value="INICIAR SESIÓN" class="btn btn-primary">
 
 				</form>
@@ -33,25 +36,27 @@
 			</div>
 
 		</div>
-		
+
 	</div>
 
 </div>
 
 <!-- PARTE INFERIOR PARA EL SIGN IN DESDE APLICACIONES EXTERNAS (FACEBOOK, GOOGLE+) -->
 <div class="row">
-	
-	<div class="col-md-6 mx-auto mt-2 text-center">
-		
-		<div class="card text-white bg-primary">
-			
-			<div class="card-body d-flex justify-content-around">
-<!-- BOTÓN PARA LOGIN DESDE FACEBOOK -->
-				<button class="btn btn-lg btn-facebook btn-sm"><i class="fa fa-facebook"></i> Facebook</button>
-<!-- BOTÓN PARA LOGIN DESDE GOOGLE+ -->
-				<button class="btn btn-lg btn-google btn-sm"><i class="fa fa-google-plus"></i> Google</button>
 
+	<div class="col-md-6 mx-auto mt-2 text-center">
+
+		<div class="card text-white bg-primary">
+
+			<div class="card-body d-flex justify-content-around">
+				<!-- BOTÓN PARA LOGIN DESDE FACEBOOK -->
+				<button class="btn btn-lg btn-facebook btn-sm"><i class="fa fa-facebook"></i> Facebook</button>
+				<!-- BOTÓN PARA LOGIN DESDE GOOGLE+ -->
+				<button class="btn btn-lg btn-google btn-sm"><i class="fa fa-google-plus"></i> Google</button>
 			</div>
+
 		</div>
+
 	</div>
+
 </div>

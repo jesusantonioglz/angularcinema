@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// Servicio
 import { AuthService } from '../../servicios/auth.service';
+// Enrutador
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-login.component.scss']
 })
 export class PageLoginComponent implements OnInit {
-	
+
   public email: string;
 	public password: string;
 
@@ -21,7 +23,7 @@ export class PageLoginComponent implements OnInit {
   }
 
   onSubmitLogin(){
-    this.authService.loginEmail(this.email, this.password)
+    this.authService.loginEmail( this.email, this.password )
       .then( (res) => {
         this.router.navigate(['/private']);
       }).catch((err) => {
