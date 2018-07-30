@@ -29,26 +29,26 @@
   <br><br>
 
 
-  <h1 class="display-3">PELICULA: <!--{{ doc.Titulo }}--></h1>
+  <h1 class="display-3">PELICULA: {{ pelicula.Titulo }} </h1>
 
 
   <br><br>
 
-	<!--<img [src]="pelicula.wallpaper" width="140px">-->
+	<img [src]="pelicula.wallpaper" width="140px">
 
 
   <h1>SINOPSIS: </h1>
-	<p class="lead">
-		<!--{{doc.Sinopsis}}-->
+	<!--<p class="lead">-->
+  <p>
+		{{pelicula.Sinopsis}}
 	</p>
 
   <br><br>
 
 	<hr class="my-4">
 
-<!--
-	<p> VALORACIÓN: {{item.promedio}}</p>
--->
+
+	<p> VALORACIÓN: {{pelicula.promedio}}</p>
 
   <fieldset class="rating">
     <input type="radio" id="star5" name="rating" value="5" />
